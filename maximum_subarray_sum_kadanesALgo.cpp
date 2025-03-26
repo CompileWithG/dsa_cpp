@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-
+//a negative prefix sum reduces the total sum ,so we discard it and start fresh
+//we keep track of the best possible sum at every step
 
 pair<int,int> kadanes_algo(vector<int> &arr){
     int n=arr.size();
@@ -24,4 +25,5 @@ pair<int,int> kadanes_algo(vector<int> &arr){
         }
 
     }
+    return {start_index,end_index};
 }
