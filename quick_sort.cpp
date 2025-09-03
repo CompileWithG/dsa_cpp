@@ -16,10 +16,10 @@ int partition(vector<int> &arr,int low,int high){
     int i=low;
     int j=high;
     while(i<j){
-        while(arr[i]<arr[pivot]){
+        while(arr[i]<arr[pivot] && i<high){
             i++;
         }
-        while(arr[j]>arr[pivot]){
+        while(arr[j]>arr[pivot] && j>low){
             j--;
         }
         if(i<j){
